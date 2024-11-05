@@ -1,0 +1,16 @@
+{
+  "name": "@cosmicode/ranger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/Ranger.js",
+  "scripts": {
+    "build": "tsc",
+    "main": "./dist/Ranger.js",
+    "types": "./dist/Ranger.d.ts"
+  },
+  "author": "Anton Harbers",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
