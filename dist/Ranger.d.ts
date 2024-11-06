@@ -11,4 +11,8 @@ export declare class Ranger {
     toArray(): number[];
     toReverseArray(): number[];
     get length(): number;
+    reverse(): void;
+    filter(callback: (value: number) => boolean): number[];
+    map(callback: (value: number) => number): number[];
+    clone(): Ranger;
 }

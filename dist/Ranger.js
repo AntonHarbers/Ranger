@@ -56,5 +56,18 @@ class Ranger {
     get length() {
         return Math.floor((this.end - this.start) / this.step) + 1;
     }
+    reverse() {
+        [this.start, this.end] = [this.end, this.start];
+        this.step = -this.step;
+    }
+    filter(callback) {
+        return this.toArray().filter(callback);
+    }
+    map(callback) {
+        return this.toArray().map(callback);
+    }
+    clone() {
+        return new Ranger(this.start, this.end, this.step);
+    }
 }
 exports.Ranger = Ranger;

@@ -72,3 +72,39 @@ Will return a joined array like so:
 ```js
 let string = new Ranger(0, 10, 3).toString(); // return "[0, 3, 6, 9]"
 ```
+
+### Reverse method
+
+Will reverse the range of your ranger
+
+```js
+const range = new Ranger(0, 10, 2);
+range.reverse(); // range becomes start: 10, end: 0, step: -2
+```
+
+### Filter method
+
+Accepts a callback as a parameter, returns the filtered array on the range
+
+```js
+const range = new Ranger(1, 10, 2); // [1, 3, 5, 7, 9]
+console.log(range.filter((x) => x % 3 === 0)); // [3, 9]
+```
+
+### Map method
+
+Accepts a callback as a parameter, returns the mapped array on the range
+
+```js
+const range = new Ranger(1, 10, 2); // [1, 3, 5, 7, 9]
+console.log(range.map((x) => x * 2)); // [2, 6, 10, 14, 18]
+```
+
+### Clone method
+
+Returns a clone of the ranger
+
+```js
+const range = new Ranger(1, 10, 2); // [1, 3, 5, 7, 9]
+const range2 = range.clone(); // [1, 3, 5, 7, 9]
+```
